@@ -1,0 +1,436 @@
+:root {
+    --primary-dark: #260303;
+    --primary-dark2: #A6360D;
+    --primary-medium: #D95204;
+    --primary-light: #F28B30;
+    --accent: #F29829;
+    --neutral-gray: #D8D9D7;
+    --gray-color: #797979;
+}
+
+body {
+    color: var(--gray-color);
+    background: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-toggler-icon {
+    background-color: var(--accent);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:red;
+}
+
+a {
+    color: #313131;
+    transition: color .3s;
+}
+
+a:hover, a:active, a:focus {
+    color: #3CA6A6;
+    text-decoration: none;
+}
+
+.btn, .form-control:focus {
+    box-shadow: none;
+}
+
+.container-fluid {
+    max-width: 1366px;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--primary-dark);
+    background: var(--accent);
+    border: 2px solid transparent;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 50px var(--accent);
+    transition: background-color .3s, box-shadow .3s, color .3s;
+}
+
+.btn:hover {
+    color: var(--neutral-gray);
+    background: var(--primary-dark);
+    box-shadow: inset 0 0 0 0 var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+#loader {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-out, visibility 0s linear .3s;
+    z-index: 999;
+}
+
+#loader.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .6s ease-out;
+}
+
+#loader .loader {
+    width: 45px; height: 45px;
+    border: 5px solid #ddd;
+    border-top: 5px solid #3CA6A6;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    width: 44px; height: 44px;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 22px;
+    right: 15px; bottom: 15px;
+    z-index: 9;
+}
+
+.back-to-top i {
+    color: #fff;
+}
+
+.back-to-top:hover i {
+    color: #414141;
+}
+
+/* Navbar CSS */
+.navbar {
+    position: relative;
+    z-index: 999;
+    transition: background-color .5s;
+}
+
+.navbar.nav-sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+}
+
+.navbar .navbar-brand {
+    margin: 0;
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: color .5s;
+}
+
+.navbar .navbar-brand img {
+    max-width: 100%;
+    max-height: 40px;
+}
+
+.navbar .navbar-nav .nav-link {
+    padding: 10px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color .3s;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active {
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    padding: 120px 0;
+    background: var(--primary-dark);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero .hero-content {
+    padding-left: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.hero-text p {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero-text h1 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero-text h2 {
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.hero-btn .btn {
+    margin-top: 35px;
+    color: #3CA6A6;
+    background: #fff;
+    box-shadow: inset 0 0 0 50px #fff;
+}
+
+.hero-btn .btn:hover {
+    color: #fff;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 #fff;
+}
+
+.cursive-heading {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+}
+
+.cursive-heading-p {
+    background-color: var(--primary-dark2)
+}
+
+.freguesia {
+    background-color: var(--primary-light);
+}
+
+.email-box{
+    background-color: var(--accent);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 991.98px) {
+    .hero {
+        padding-top: 60px;
+    }
+    
+    .hero .hero-content {
+        padding: 0 15px;
+    }
+
+    .hero-text p {
+        font-size: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 45px;
+    }
+
+    .hero-text h2 {
+        font-size: 25px;
+    }
+
+    .hero-btn .btn {
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .hero, .hero-text, .hero-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-text p {
+        font-size: 18px;
+    }
+    
+    .hero-text h1 {
+        font-size: 35px;
+    }
+
+    .hero-btn .btn {
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-text p {
+        font-size: 16px;
+    }
+    
+    .hero-text h1 {
+        font-size: 30px;
+    }
+    
+    .hero-text h2 {
+        font-size: 18px;
+    }
+
+    .hero-btn .btn {
+        padding: 8px 10px;
+    }
+}
+
+/* Service */
+.title-especiarias{
+    color: var(--accent);
+}
+
+.text-especiaria{
+    color: var(--primary-light);
+}
+
+/* Cardapio */
+.cardapio{
+    background-color: var(--primary-dark);
+}
+
+.carpadio-title{
+    color: var(--accent);
+}
+
+.card {
+    background-color: var(--primary-dark2);
+}
+
+.unidade-title {
+    color: var(--accent);
+}
+
+.card-text {
+    color: var(--neutral-gray);
+}
+
+/* Footer CSS */
+/* Footer CSS */
+.footer {
+    background: var(--accent);
+    padding: 60px 0;
+}
+
+.footer-info h2, .footer-info h3 {
+    color: #fff;
+    text-align: center; /* Garantindo que os títulos fiquem centralizados */
+}
+/* Footer Menu - Alinhamento e proximidade dos itens */
+.footer-menu {
+    display: flex;
+    justify-content: center;  /* Centraliza os itens horizontalmente */
+    align-items: center;  /* Alinha verticalmente */
+    width: 100%;  /* Garante que o contêiner ocupe toda a largura disponível */
+    margin-top: 20px; /* Ajuste a margem conforme necessário */
+}
+
+/* Estilos dos itens dentro do footer */
+.footer-menu p {
+    font-size: 16px;
+    color: #C4EEF2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px; /* Ajuste o espaçamento entre os itens */
+}
+
+/* Remover a margem do último item para que não haja um espaço extra no final */
+.footer-menu p:last-child {
+    margin-right: 0;
+}
+
+/* Ícones dentro do footer */
+.footer-menu p i {
+    margin-right: 5px; /* Reduzir o espaçamento entre o ícone e o texto */
+}
+
+/* Estilos específicos para o link do Instagram */
+.instagram {
+    color: var(--primary-dark);
+    background-color: var(--accent);
+}
+
+.instagram:hover {
+    color: var(--accent);
+    background-color: var(--primary-dark2);
+}
+
+
+
+/* Melhorando o alinhamento da área do footer */
+.container {
+    max-width: 1140px;
+    margin: 0 auto;  /* Centralizando o conteúdo */
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.footer-info, .footer-social, .copyright {
+    width: 100%; /* Faz com que todos os elementos ocupem a largura disponível */
+    text-align: center;  /* Garantindo que os elementos de texto fiquem centralizados */
+}
+
+.footer-menu p:last-child {
+    border: none;
+}
+
+/* Ajuste para que o footer fique com altura apropriada */
+.footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+/* Instagram Button */
+.instagram {
+    color: var(--primary-dark);
+    background-color: var(--accent);
+}
+
+.instagram:hover {
+    color: var(--accent);
+    background-color: var(--primary-dark2);
+}
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;  /* Previne o scroll lateral */
+}
+
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.hero, .navbar, .footer {
+    width: 100%;  /* Garante que os elementos principais ocupem toda a largura */
+    overflow: hidden; /* Impede o transbordamento de conteúdo */
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+img {
+    max-width: 100%;  /* Garante que as imagens não ultrapassem a largura da tela */
+    height: auto;
+}
