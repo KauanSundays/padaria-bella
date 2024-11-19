@@ -28,7 +28,7 @@ a {
 }
 
 a:hover, a:active, a:focus {
-    color: #3CA6A6;
+    color: var(--primary-dark2);
     text-decoration: none;
 }
 
@@ -135,6 +135,10 @@ a:hover, a:active, a:focus {
     max-width: 100%;
     max-height: 40px;
 }
+
+.email-box  {
+    margin-right: 10px;
+  }
 
 .navbar .navbar-nav .nav-link {
     padding: 10px;
@@ -298,8 +302,8 @@ a:hover, a:active, a:focus {
 }
 
 /* Cardapio */
-.cardapio{
-    background-color: var(--primary-dark);
+#cardapio{
+    color: var(--primary-dark)
 }
 
 .carpadio-title{
@@ -358,7 +362,6 @@ a:hover, a:active, a:focus {
     margin-right: 5px; /* Reduzir o espaçamento entre o ícone e o texto */
 }
 
-/* Estilos específicos para o link do Instagram */
 .instagram {
     color: var(--primary-dark);
     background-color: var(--accent);
@@ -367,6 +370,29 @@ a:hover, a:active, a:focus {
 .instagram:hover {
     color: var(--accent);
     background-color: var(--primary-dark2);
+}
+
+.whatsapp:hover {
+    color: var(--accent);
+    background-color: var(--primary-dark2);
+}
+
+.footer-texts {
+    color: var(--primary-dark);
+}
+
+.maps {
+    color: var(--primary-dark);
+    background-color: var(--accent);
+}
+
+.maps:hover {
+    color: var(--accent);
+    background-color: var(--primary-dark2);
+}
+
+.text-normal {
+    text-transform: none;
 }
 
 
