@@ -1,5 +1,5 @@
 (function ($) {
-    const words = ["Padaria", "Buffet", "Almoço", "Jantar", "Pizzaria"];
+    const words = ["Padaria", "Buffet", "Almoço", "Doceria", "Pizzaria"];
     let currentIndex = 0;
     let currentWord = "";
     let isDeleting = false;

@@ -303,7 +303,7 @@ a:hover, a:active, a:focus {
 
 /* Service */
 .title-especiarias{
-    color: var(--accent);
+    color: var(--primary-medium);
 }
 
 .text-especiaria{
